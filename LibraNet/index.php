@@ -37,7 +37,7 @@ if ($db->getConnection()) {
                         Libra<span>Net</span>
                     </div>
                         <div style="display: flex; justify-content: flex-end;">
-                            <button class="btn btn-success btn-md">Add Book</button>
+                            <button class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#addBook">Add Book</button>
                         </div>
                     <div class="card-body">
                         <table class="table table-striped">
@@ -45,7 +45,7 @@ if ($db->getConnection()) {
                                 <tr>
                                     <th width="15%">ID</th>
                                     <th width="55%">Title</th> 
-                                    <th width="30%">Manage Book</th>      
+                                    <th width="30%">Management</th>      
                                 </tr>
                             </thead>
                             <tbody>
@@ -64,5 +64,51 @@ if ($db->getConnection()) {
                 </div>
             </div>
         </div>
+        
+
+<!-- Modal for adding new book -->
+<div class="modal fade" id="addBook" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel"><i class="fa-solid fa-book-open"></i> Add Book</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form id="addBookForm">
+            <div class="form-group">
+                <label for="bookTitle">Title</label>
+                <input type="text" name="bookTitle" class="form-control" required placeholder="Enter title">
+            </div>
+            <div class="form-group">
+                <label for="bookDescript">Description</label>
+                <input type="text" name="bookDescript" class="form-control" required placeholder="Brief description">
+            </div>
+            <div class="form-group">
+                <label for="author">Author</label>
+                <input type="text" name="author" class="form-control" required placeholder="Enter author">
+            </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" id="addBookBtn">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#addBookBtn").on('click', function(){
+            event.preventDefault();
+            $.post('/LibraNet/modules/addBook.php', $('form#addBookForm').serialize(), function(data){
+                var data = JSON.parse(data);
+                console.log(data);
+            });
+        });
+    });
+</script>
+
 </body>
 </html>
