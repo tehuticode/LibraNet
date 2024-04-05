@@ -4,7 +4,7 @@
         private $user;
         private $password;
         private $database;
-        private $conn;
+        public $conn;
 
         public function __construct($host, $user, $password, $database) {
             $this->host = $host;

@@ -5,47 +5,58 @@ ini_set('error_log', 'php-errors.log');
 include $_SERVER['DOCUMENT_ROOT'] . "/LibraNet/utilities/DBconnect.php";
 
 class Book {
-    private $conn;
-
-    public function __construct($conn) {
-        $this->conn = $conn;
+    public $conn;
+    
+    public function __construct() {
+    $db = new DBconnect("localhost", "root", "", "db_library");
+    $this->conn = $db->conn;
     }
 
     public function saveBook($post) {
-        $requiredFields = ['bookTitle', 'bookDescript', 'author'];
-        foreach ($requiredFields as $field) {
-            if (empty($post[$field])) {
-                return json_encode(["type" => "error", "message" => "Missing required field: $field"]);
-            }
-        }
-
         $bookTitle = $post['bookTitle'];
         $bookDescript = $post['bookDescript'];
         $author = $post['author'];
-
-        $sql = "INSERT INTO books (bookTitle, bookDescript, author) VALUES (:bookTitle, :bookDescript, :author)";
+    
+        $sql = "INSERT INTO books(bookTitle, bookDescript, author) VALUES (:bookTitle, :bookDescript, :author)";
         $stmt = $this->conn->prepare($sql);
-
-        $result = $stmt->execute([
-            'bookTitle' => $bookTitle,
-            'bookDescript' => $bookDescript,
-            'author' => $author
-        ]);
-
-        if ($result) {
-            return json_encode(["type" => "success", "message" => "Book saved successfully"]);
+    
+        $params = array(
+            ':bookTitle' => $bookTitle,
+            ':bookDescript' => $bookDescript,
+            ':author' => $author
+        );
+    
+        if ($stmt->execute($params)) {
+            return json_encode(array("type" => "success", "message" => "Book saved successfully"));
         } else {
-            error_log("Book save failed: " . $stmt->errorInfo()[2]);
-            return json_encode(["type" => "error", "message" => "Book save failed"]);
+            return json_encode(array("type" => "error", "message" => "Book save failed"));
         }
     }
 }
 
-// Create a new Book instance and handle saving if 'addBook' is POSTed.
-if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_POST['addBook'])) {
-    $db = new DBconnect("localhost", "root", "", "db_library");
-    $book = new Book($db->getConnection());
-    echo $book->saveBook($_POST);
-}
+// Create a new Book instance and handle saving if 'bookTitle' is POSTed.
+     if (isset($_POST['bookTitle'])) {
+        $book = new Book();
+        $result = $book->saveBook($_POST);
+        error_log("saveBook returned: " . print_r($result, true));
+        echo $result;
+    } 
+   
+
+/* 
+
+    error_log("POST data: " . print_r($_POST, true));
+
+if (isset($_POST['addBook'])) {
+    error_log("addBook is set in POST data");
+    $book = new Book();
+    error_log("Book object created: " . print_r($book, true));
+    $result = $book->saveBook($_POST);
+    error_log("saveBook returned: " . print_r($result, true));
+    echo $result;
+} else {
+    error_log("addBook is not set in POST data");
+} */
+
 ?>
 

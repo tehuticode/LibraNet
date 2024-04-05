@@ -67,7 +67,7 @@ if ($db->getConnection()) {
         
 
 <!-- Modal for adding new book -->
-<div class="modal fade" id="addBook" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="addBook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -98,13 +98,43 @@ if ($db->getConnection()) {
   </div>
 </div>
 
+
+<!-- Modal for adding new book -->
+<div class="modal fade" id="addBook" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Alert</h1>
+     
+      <div class="modal-body">
+        <div class="alert"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- code works now -->
 <script type="text/javascript">
     $(document).ready(function(){
         $("#addBookBtn").on('click', function(){
             event.preventDefault();
-            $.post('/LibraNet/modules/addBook.php', $('form#addBookForm').serialize(), function(data){
+            $.post('modules/addBook.php', $('form#addBookForm').serialize(), function(data){
                 var data = JSON.parse(data);
-                console.log(data);
+                
+                if (data.type == 'success') {
+                    $('#addBook').modal('hide');
+                    $('#alert').modal('show');
+                    $('#alert.alert').addClass('alert-success').append(data.message).delay(20000).fadeOut('slow', function(){
+                       location.reload();
+                    });
+                }else {
+                    $('#addBook').modal('hide');
+                    $('#alert').modal('show');
+                    $('#alert.alert').addClass('alert-danger').append(data.message).delay(20000).fadeOut('slow', function(){
+                       location.reload();
+                    });
+                }
             });
         });
     });

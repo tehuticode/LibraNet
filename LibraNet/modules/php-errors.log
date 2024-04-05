@@ -1,0 +1,9 @@
+[05-Apr-2024 02:56:27 Europe/Berlin] POST data: Array
+(
+    [bookTitle] => z
+    [bookDescript] => z
+    [author] => z
+)
+
+[05-Apr-2024 02:56:27 Europe/Berlin] addBook is not set in POST data
+[05-Apr-2024 03:48:01 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
