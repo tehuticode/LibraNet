@@ -1,13 +1,15 @@
 <?php
-include "utilities/DBconnect.php";
+require_once "modules/addBook.php";
+include_once "utilities/DBconnect.php";
 $db = new DBconnect("localhost", "root", "", "db_library");
 $conn = $db->getConnection();
 
-if ($db->getConnection()) {
+if ($conn) {
     echo "";
 } else {
     echo "Not connected to database.";
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -49,13 +51,25 @@ if ($db->getConnection()) {
                                 </tr>
                             </thead>
                             <tbody>
-                                <td>12345</td>
-                                <td>ABC</td>
+                            <?php
+                            //Get all book list
+                             $book = new Book();
+                             $books = $book->getBooks();
+                             $no = 0;
+                             foreach ($books as $book):
+                                $no++;
+                            ?>
+                            <tr>
+                                <td><?php echo $no; ?></td>
+                                <td>
+                                    <h4><?php echo $book['bookTitle']; ?></h4>
+                                   <small><?php echo $book['author']; ?></small> 
                                 <td>
                                     <button class="btn btn-primary btn-sm"><i class="fa-solid fa-pen-to-square"></i> Edit Book</button>
                                     <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Delete Book</button>
                                 </td>
-                            
+                             </tr>
+                             <?php endforeach; ?>
                                
                             </tbody>
                         </table>

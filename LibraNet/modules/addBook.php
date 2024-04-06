@@ -32,6 +32,16 @@ class Book {
             return json_encode(array("type" => "error", "message" => "Book save failed"));
         }
     }
+    //Retrieve books from db
+    public function getBooks() {
+        $sql = "SELECT * FROM books";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute();
+        $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        return $books;
+    }
+
+    
 }
 
 // Create a new Book instance and handle saving if 'bookTitle' is POSTed.
