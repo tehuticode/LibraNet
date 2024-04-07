@@ -40,6 +40,30 @@ class Book {
         $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
         return $books;
     }
+//Edit books in db
+    public function editBook($editId) {
+        $sql = "SELECT * FROM books WHERE bookID = :editId";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([':editId' => $editId]);
+        
+        //Attmepting to log error to see if the editId is being passed
+        error_log("SQL query: $sql");
+        error_log("editId: $editId");
+        error_log("Number of rows: " . $stmt->rowCount());
+        
+        if($stmt->rowCount() > 0) {
+            while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $data['bookID'] = $row['bookID'];
+                $data['bookTitle'] = $row['bookTitle'];
+                $data['bookDescript'] = $row['bookDescript'];
+                $data['author'] = $row['author'];
+            }
+    
+            return json_encode($data);
+        } else {
+            return json_encode(array("type" => "error", "message" => "No book found with the provided ID"));
+        }
+    }
 
     
 }
@@ -51,22 +75,15 @@ class Book {
         error_log("saveBook returned: " . print_r($result, true));
         echo $result;
     } 
-   
 
-/* 
+    
+    if(isset($_POST['editId'])){
+        $book = new Book();
+        $result = $book->editBook($_POST['editId']);
+        error_log("editId returned: " . print_r($result, true));
+        echo $result;
+    }
 
-    error_log("POST data: " . print_r($_POST, true));
-
-if (isset($_POST['addBook'])) {
-    error_log("addBook is set in POST data");
-    $book = new Book();
-    error_log("Book object created: " . print_r($book, true));
-    $result = $book->saveBook($_POST);
-    error_log("saveBook returned: " . print_r($result, true));
-    echo $result;
-} else {
-    error_log("addBook is not set in POST data");
-} */
 
 ?>
 

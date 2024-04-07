@@ -8,3 +8,196 @@
 [05-Apr-2024 02:56:27 Europe/Berlin] addBook is not set in POST data
 [05-Apr-2024 03:48:01 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
 [06-Apr-2024 02:48:27 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[06-Apr-2024 02:51:56 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[06-Apr-2024 02:52:56 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[07-Apr-2024 08:23:12 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[07-Apr-2024 08:39:09 Europe/Berlin] PHP Warning:  Uncaught PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:29
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(29): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(50): Book->saveBook(Array)
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 29
+[07-Apr-2024 08:39:09 Europe/Berlin] PHP Fatal error:  Maximum execution time of 120 seconds exceeded in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 50
+[07-Apr-2024 08:39:13 Europe/Berlin] PHP Fatal error:  Uncaught Exception: Connection failed: SQLSTATE[HY000] [2002] No connection could be made because the target machine actively refused it in C:\xampp\htdocs\LibraNet\LibraNet\utilities\DBconnect.php:19
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(11): DBconnect->__construct('localhost', 'root', '', 'db_library')
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(58): Book->__construct()
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\utilities\DBconnect.php on line 19
+[07-Apr-2024 08:39:51 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(66): Book->editBook('<br />\n<b>Warni...')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 08:40:09 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(66): Book->editBook('<br />\n<b>Warni...')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 08:40:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(66): Book->editBook('<br />\n<b>Warni...')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 08:40:27 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(66): Book->editBook('<br />\n<b>Warni...')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 08:40:54 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42S22]: Column not found: 1054 Unknown column 'id' in 'where clause' in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(66): Book->editBook('<br />\n<b>Warni...')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 08:43:33 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(66): Book->editBook('<br />\n<b>Warni...')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 08:54:16 Europe/Berlin] editId returned: 
+[07-Apr-2024 08:55:58 Europe/Berlin] editId returned: 
+[07-Apr-2024 08:59:59 Europe/Berlin] editId returned: 
+[07-Apr-2024 09:03:04 Europe/Berlin] editId returned: 
+[07-Apr-2024 09:05:36 Europe/Berlin] editId returned: 
+[07-Apr-2024 09:06:20 Europe/Berlin] editId returned: 
+[07-Apr-2024 09:08:50 Europe/Berlin] editId returned: 
+[07-Apr-2024 10:09:29 Europe/Berlin] editId returned: 
+[07-Apr-2024 10:11:09 Europe/Berlin] editId returned: 
+[07-Apr-2024 10:14:11 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:14:18 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:15:19 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:22:21 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:23:29 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:23:50 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:28:34 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:29:21 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[07-Apr-2024 10:29:32 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:37:23 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:42:17 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:53:19 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:53:24 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:53:26 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 10:58:34 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 10:58:34 Europe/Berlin] editId: 
+[07-Apr-2024 10:58:34 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 10:58:34 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:02:08 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:02:08 Europe/Berlin] editId: 
+[07-Apr-2024 11:02:08 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:02:08 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:15:39 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:15:39 Europe/Berlin] editId: 
+[07-Apr-2024 11:15:39 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:15:39 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:16:13 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:16:13 Europe/Berlin] editId: 
+[07-Apr-2024 11:16:13 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:16:13 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:16:20 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:16:20 Europe/Berlin] editId: 
+[07-Apr-2024 11:16:20 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:16:20 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:18:22 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:18:22 Europe/Berlin] editId: 
+[07-Apr-2024 11:18:22 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:18:22 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:19:13 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:19:13 Europe/Berlin] editId: 
+[07-Apr-2024 11:19:13 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:19:13 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:19:16 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:19:16 Europe/Berlin] editId: 
+[07-Apr-2024 11:19:16 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:19:16 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:20:10 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:20:10 Europe/Berlin] editId: 
+[07-Apr-2024 11:20:10 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:20:10 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:27:39 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:27:39 Europe/Berlin] editId: 
+[07-Apr-2024 11:27:39 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:27:39 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:33:40 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:33:40 Europe/Berlin] editId: 
+[07-Apr-2024 11:33:40 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:33:40 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:39:50 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:39:50 Europe/Berlin] editId: 
+[07-Apr-2024 11:39:50 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:39:50 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:40:02 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:40:02 Europe/Berlin] editId: 
+[07-Apr-2024 11:40:02 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:40:02 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:43:46 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(82): Book->editBook('')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 11:44:00 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(82): Book->editBook('')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 11:44:22 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[HY093]: Invalid parameter number: number of bound variables does not match number of tokens in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:47
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(47): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(82): Book->editBook('')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 47
+[07-Apr-2024 11:50:23 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookId = :editId
+[07-Apr-2024 11:50:23 Europe/Berlin] editId: 
+[07-Apr-2024 11:50:23 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:50:23 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:53:12 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:53:12 Europe/Berlin] editId: 
+[07-Apr-2024 11:53:12 Europe/Berlin] Number of rows: 0
+[07-Apr-2024 11:53:12 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[07-Apr-2024 11:57:03 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:57:03 Europe/Berlin] editId: 1
+[07-Apr-2024 11:57:03 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:57:03 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[07-Apr-2024 11:57:33 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:57:33 Europe/Berlin] editId: 3
+[07-Apr-2024 11:57:33 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:57:33 Europe/Berlin] editId returned: {"bookID":"3","bookTitle":"x","bookDescript":"x","author":"x"}
+[07-Apr-2024 11:57:38 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:57:38 Europe/Berlin] editId: 5
+[07-Apr-2024 11:57:38 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:57:38 Europe/Berlin] editId returned: {"bookID":"5","bookTitle":"My Wife is the Best","bookDescript":"As above","author":"Daddy"}
+[07-Apr-2024 11:57:43 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:57:43 Europe/Berlin] editId: 6
+[07-Apr-2024 11:57:43 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:57:43 Europe/Berlin] editId returned: {"bookID":"6","bookTitle":"Cartiana is Daddys number 1","bookDescript":"Beautitful princess Cartiana","author":"Daddy"}
+[07-Apr-2024 11:57:57 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:57:57 Europe/Berlin] editId: 6
+[07-Apr-2024 11:57:57 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:57:57 Europe/Berlin] editId returned: {"bookID":"6","bookTitle":"Cartiana is Daddys number 1","bookDescript":"Beautitful princess Cartiana","author":"Daddy"}
+[07-Apr-2024 11:58:04 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:58:04 Europe/Berlin] editId: 8
+[07-Apr-2024 11:58:04 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:58:04 Europe/Berlin] editId returned: {"bookID":"8","bookTitle":"New book","bookDescript":"This is a new book","author":"Me"}
+[07-Apr-2024 11:58:46 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 11:58:46 Europe/Berlin] editId: 5
+[07-Apr-2024 11:58:46 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 11:58:46 Europe/Berlin] editId returned: {"bookID":"5","bookTitle":"My Wife is the Best","bookDescript":"As above","author":"Daddy"}
+[07-Apr-2024 12:02:13 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:02:13 Europe/Berlin] editId: 5
+[07-Apr-2024 12:02:13 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:02:13 Europe/Berlin] editId returned: {"bookID":"5","bookTitle":"My Wife is the Best","bookDescript":"As above","author":"Daddy"}
+[07-Apr-2024 12:02:16 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:02:16 Europe/Berlin] editId: 7
+[07-Apr-2024 12:02:16 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:02:16 Europe/Berlin] editId returned: {"bookID":"7","bookTitle":"","bookDescript":"","author":""}
+[07-Apr-2024 12:02:20 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:02:20 Europe/Berlin] editId: 6
+[07-Apr-2024 12:02:20 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:02:20 Europe/Berlin] editId returned: {"bookID":"6","bookTitle":"Cartiana is Daddys number 1","bookDescript":"Beautitful princess Cartiana","author":"Daddy"}
