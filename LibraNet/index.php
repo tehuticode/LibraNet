@@ -43,7 +43,7 @@ if (!$conn) {
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th width="15%">ID</th>
+                                    <th width="15%">#</th>
                                     <th width="55%">Title</th> 
                                     <th width="30%">Management</th>      
                                 </tr>
@@ -60,11 +60,12 @@ if (!$conn) {
                             <tr>
                                 <td><?php echo $no; ?></td>
                                 <td>
+                                    
                                     <h4><?php echo $book['bookTitle']; ?></h4>
                                    <small><?php echo $book['author']; ?></small> 
                                 <td>
                                 <button class="btn btn-primary btn-sm editButton"  id="<?php echo isset($book['bookID']) ? $book['bookID'] : ''; ?>"><i class="fa-solid fa-pen-to-square"></i> Edit Book</button>
-                                    <button class="btn btn-danger btn-sm"><i class="fa-solid fa-trash"></i> Delete Book</button>
+                                    <button class="btn btn-danger btn-sm deleteButton" id="<?php echo isset($book['bookID']) ? $book['bookID'] : ''; ?>"><i class="fa-solid fa-trash"></i> Delete Book</button>
                                 </td>
                              </tr>
                              <?php endforeach; ?>
@@ -162,8 +163,7 @@ if (!$conn) {
 
 <!--jQuery -->
 
-    
-</script> -->
+
 <script type="text/javascript">
 $(document).ready(function(){
 
@@ -175,7 +175,7 @@ function handleResponse(data, successClass, failureClass) {
     // Determine the class for the alert based on the response type
     var alertClass = data.type === 'success' ? successClass : failureClass;
     // Add the alert class, append the message, delay for 15 seconds, fade out and then reload the page
-    $('#alert .alert').addClass(alertClass).append(data.message).delay(3000).fadeOut('slow', function(){
+    $('#alert .alert').addClass(alertClass).append(data.message).delay(1500).fadeOut('slow', function(){
         location.reload();
     });
 }
@@ -252,13 +252,32 @@ $(".editButton").on('click', function(e){
     function showAlertAndReload(modalSelector, alertSelector, alertType, message) {
         $(modalSelector).modal('hide');
         $(alertSelector).modal('show');
-        $(alertSelector + ' .alert').removeClass('alert-success alert-danger').addClass(alertType).html(message).delay(3000).fadeOut('slow', function(){
+        $(alertSelector + ' .alert').removeClass('alert-success alert-danger').addClass(alertType).html(message).delay(1500).fadeOut('slow', function(){
             location.reload();
         });
     }
+
+    // Event handler for the deleteButton click event
+
+    $('.deleteButton').on('click', function(e){
+    e.preventDefault();
+    let deleteConf = confirm("You want to delete this book?")
+    if(deleteConf) {
+        handlePost('modules/addBook.php', {deleteId: e.target.id}, function(data){
+            console.log('Data:', data);
+            var alertType = data.type === 'success' ? 'alert-success' : 'alert-danger';
+            showAlertAndReload('#editBookModal', '#alert', alertType, data.message);
         });
+    }
+});
+
+ });
  
+
+
+
 </script>
 
 </body>
 </html>
+    

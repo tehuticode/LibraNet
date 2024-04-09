@@ -87,11 +87,27 @@ class Book {
             return json_encode(array("type" => "error", "message" => "Book update failed"));
         }
     }
-    
-}
 
+//Delete books from db
+
+    public function deleteBook($deleteId) {
+        $sql = "DELETE FROM books WHERE bookID = :deleteId";
+        $stmt = $this->conn->prepare($sql);
+        $stmt->execute([':deleteId' => $deleteId]);
+        
+        if($stmt->rowCount() > 0) {
+            return json_encode(array("type" => "success", "message" => "Book deleted"));
+        } else {
+            return json_encode(array("type" => "error", "message" => "Book delete failed"));
+        }
+    }
+}
 // This code is responsible for handling book-related operations in LibraNet
+
+
 $book = new Book();
+
+
 
 if (isset($_POST['bookTitle'])) {
     $result = $book->saveBook($_POST);
@@ -107,6 +123,11 @@ if(isset($_POST['editId'])){
 
 if(isset($_POST['bookID'])){
     $result = $book->updateBook($_POST);
+    echo $result;
+}
+
+if(isset($_POST['deleteId'])){
+    $result = $book->deleteBook($_POST['deleteId']);
     echo $result;
 }
 

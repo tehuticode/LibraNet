@@ -1,6 +1,6 @@
 # LibraNet
 
-LibraNet is a library management system built with PHP.
+LibraNet is a library management system built with PHP, javascript, bootstrap and MySql
 
 ## Installation
 
@@ -12,7 +12,7 @@ LibraNet is a library management system built with PHP.
 
 ## Usage
 
-Provide instructions on how to use my project.
+<!-- Enhance and personalize your reading experience by effortlessly managing your private library collection. With the ability to add, edit, or remove books, you have complete control over your literary world. Create detailed descriptions for each title, making it easier to recall your thoughts and impressions on every read. This feature transforms your collection into a curated reflection of your reading journey, allowing you to navigate and revisit your favorite stories and insights with ease. -->
 
 ## License
 

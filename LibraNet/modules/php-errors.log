@@ -522,3 +522,38 @@ Stack trace:
 [09-Apr-2024 06:11:45 Europe/Berlin] editId: 4
 [09-Apr-2024 06:11:45 Europe/Berlin] Number of rows: 1
 [09-Apr-2024 06:11:45 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 10:18:48 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM books WHERE bookID = '13'' at line 1 in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:96
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(96): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(130): Book->deleteBook('13')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 96
+[09-Apr-2024 10:19:04 Europe/Berlin] PHP Fatal error:  Uncaught PDOException: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* FROM books WHERE bookID = '8'' at line 1 in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:96
+Stack trace:
+#0 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(96): PDOStatement->execute(Array)
+#1 C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php(130): Book->deleteBook('8')
+#2 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 96
+[09-Apr-2024 10:22:11 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 10:22:11 Europe/Berlin] editId: 4
+[09-Apr-2024 10:22:11 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 10:22:11 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 10:22:15 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 10:22:15 Europe/Berlin] editId: 5
+[09-Apr-2024 10:22:15 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 10:22:15 Europe/Berlin] editId returned: {"bookID":"5","bookTitle":"My Wife is the Best 2","bookDescript":"As above","author":"Daddy"}
+[09-Apr-2024 10:23:18 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 10:23:41 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 10:23:41 Europe/Berlin] editId: 20
+[09-Apr-2024 10:23:41 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 10:23:41 Europe/Berlin] editId returned: {"bookID":"20","bookTitle":"Wheel of Time","bookDescript":"Epic tale about the dragon","author":"Robert Jordan"}
+[09-Apr-2024 10:24:01 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 10:24:01 Europe/Berlin] editId: 20
+[09-Apr-2024 10:24:01 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 10:24:01 Europe/Berlin] editId returned: {"bookID":"20","bookTitle":"Wheel of Time","bookDescript":"Epic tale about the dragon. Adding some more details here","author":"Robert Jordan"}
+[09-Apr-2024 10:32:00 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 10:32:05 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 10:32:05 Europe/Berlin] editId: 21
+[09-Apr-2024 10:32:05 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 10:32:05 Europe/Berlin] editId returned: {"bookID":"21","bookTitle":"The yummy dinner","bookDescript":"Yummy dnner for me","author":"Mummy"}
+[09-Apr-2024 10:34:00 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
