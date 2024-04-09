@@ -104,7 +104,7 @@ if (!$conn) {
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="addBookBtn">Save changes</button>
+        <button type="button" class="btn btn-primary" id="addBookBtn">Save</button>
       </div>
     </div>
   </div>
@@ -122,8 +122,8 @@ if (!$conn) {
         <form id="editBookForm">
             <div class="form-group">
                 <label for="bookTitle">Title</label>
-                <input type="text" name="bookTitle" id="editBookTitle" class="form-control" required placeholder="Enter title">
-                <input type="hidden" name="editId" id="bookId">
+                <input type="text" name="updateBookTitle" id="editBookTitle" class="form-control" required placeholder="Enter title">
+                <input type="hidden" name="bookID" id="bookID">
             </div>
             <div class="form-group">
                 <label for="bookDescript">Description</label>
@@ -133,25 +133,27 @@ if (!$conn) {
                 <label for="author">Author</label>
                 <input type="text" name="author" id="editAuthor" class="form-control" required placeholder="Enter author">
             </div>
-        </form>
+        
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary" id="editBookBtn">Save changes</button>
+        <button type="button" class="btn btn-primary" id="updateBook" name="updateBtn">Save</button>
       </div>
+      </form>
     </div>
   </div>
 </div>
 
 <!-- Modal for alerts -->
 <div class="modal fade" id="alert" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
+  <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Alert</h1>
-     
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> 
       <div class="modal-body">
-        <div class="alert"></div>
+        <div class="alert" role="alert"></div> <!-- Role attribute added for accessibility -->
       </div>
     </div>
   </div>
@@ -159,83 +161,53 @@ if (!$conn) {
 
 
 <!--jQuery -->
-<!-- <script type="text/javascript">
-    $(document).ready(function(){
-        $("#addBookBtn").on('click', function(){
-            event.preventDefault();
-            $.post('modules/addBook.php', $('form#addBookForm').serialize(), function(data){
-                var data = JSON.parse(data);
-                
-                if (data.type == 'success') {
-                    $('#addBook').modal('hide');
-                    $('#alert').modal('show');
-                    $('#alert.alert').addClass('alert-success').append(data.message).delay(20000).fadeOut('slow', function(){
-                       location.reload();
-                    });
-                }else {
-                    $('#addBook').modal('hide');
-                    $('#alert').modal('show');
-                    $('#alert.alert').addClass('alert-danger').append(data.message).delay(20000).fadeOut('slow', function(){
-                       location.reload();
-                    });
-                }
-            });
-        });
-
-      $(".editButton").on('click', function(e){
-          $('#editBookModal').modal('show');
-          e.preventDefault();
-          $.post('modules/addBook.php', {editId: e.target.id}, function(data){
-              try {
-                  var parsedData = JSON.parse(data);
-                  $('#editBookTitle').val(parsedData.bookTitle);
-                  $('#bookDescript').val(parsedData.bookDescript);
-                  $('#author').val(parsedData.author);
-                  $('#BookId').val(parsedData.bookId);
-              } catch (error) {
-                  console.error("Parsing error: ", error);
-                  console.log("Raw response: ", data);
-              }
-    });
-});
-    });
 
     
 </script> -->
 <script type="text/javascript">
-   // Wait for the document to be fully loaded
 $(document).ready(function(){
 
 // Function to handle the response from server
 function handleResponse(data, successClass, failureClass) {
-    // Hide the addBook modal
     $('#addBook').modal('hide');
     // Show the alert modal
     $('#alert').modal('show');
     // Determine the class for the alert based on the response type
     var alertClass = data.type === 'success' ? successClass : failureClass;
     // Add the alert class, append the message, delay for 15 seconds, fade out and then reload the page
-    $('#alert.alert').addClass(alertClass).append(data.message).delay(15000).fadeOut('slow', function(){
+    $('#alert .alert').addClass(alertClass).append(data.message).delay(3000).fadeOut('slow', function(){
         location.reload();
     });
 }
 
 // Function to handle POST requests
 function handlePost(url, data, success) {
-    // Make a POST request to the specified URL with the provided data
     $.post(url, data, function(response){
-        try {
-            // Try to parse the response
-            var parsedData = JSON.parse(response);
-            // Call the success function with the parsed data
-            success(parsedData);
-        } catch (error) {
-            // Log any parsing errors
-            console.error("Parsing error: ", error);
-            console.log("Raw response: ", response);
+        console.log('Server response:', response);
+        console.log('Type of response:', typeof response);
+        var parsedData;
+
+        if (typeof response === 'string') {
+            try {
+                parsedData = JSON.parse(response);
+            } catch (error) {
+                console.error("Parsing error: ", error);
+                console.log("Raw response: ", response);
+                return;
+            }
+        } else if (typeof response === 'object') {
+            parsedData = response;
+        } else {
+            console.error("Unexpected response type: ", typeof response);
+            return;
         }
+
+        success(parsedData);
     });
-}
+} 
+
+
+
 
 // Event handler for the addBookBtn click event
 $("#addBookBtn").on('click', function(event){
@@ -262,9 +234,30 @@ $(".editButton").on('click', function(e){
         $('#editAuthor').val(data.author);
         $('#bookID').val(data.bookID);
         
+     });
+    });
+
+    // Event handler for the updateBook click event
+    $("#updateBook").on('click', function(event){
+        event.preventDefault();
+
+        handlePost('modules/addBook.php', $('form#editBookForm').serialize(), function(data) {
+            console.log('Data:', data);
+            var alertType = data.type === 'success' ? 'alert-success' : 'alert-danger';
+            showAlertAndReload('#editBookModal', '#alert', alertType, data.message);
     });
 });
-});
+
+// Function to show an alert and reload the page
+    function showAlertAndReload(modalSelector, alertSelector, alertType, message) {
+        $(modalSelector).modal('hide');
+        $(alertSelector).modal('show');
+        $(alertSelector + ' .alert').removeClass('alert-success alert-danger').addClass(alertType).html(message).delay(3000).fadeOut('slow', function(){
+            location.reload();
+        });
+    }
+        });
+ 
 </script>
 
 </body>

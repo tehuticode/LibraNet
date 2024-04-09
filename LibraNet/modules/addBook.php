@@ -64,25 +64,51 @@ class Book {
             return json_encode(array("type" => "error", "message" => "No book found with the provided ID"));
         }
     }
-
+ 
+    public function updateBook($post) {
+        $bookID = $post['bookID'];
+        $bookTitle = $post['updateBookTitle'];
+        $bookDescript = $post['bookDescript'];
+        $author = $post['author'];
+    
+        $sql = "UPDATE books SET bookTitle = :bookTitle, bookDescript = :bookDescript, author = :author WHERE bookID = :bookID";
+        $stmt = $this->conn->prepare($sql);
+    
+        $params = array(
+            ':bookID' => $bookID,
+            ':bookTitle' => $bookTitle,
+            ':bookDescript' => $bookDescript,
+            ':author' => $author
+        );
+    
+        if ($stmt->execute($params)) {
+            return json_encode(array("type" => "success", "message" => "Book updated successfully"));
+        } else {
+            return json_encode(array("type" => "error", "message" => "Book update failed"));
+        }
+    }
     
 }
 
-// Create a new Book instance and handle saving if 'bookTitle' is POSTed.
-     if (isset($_POST['bookTitle'])) {
-        $book = new Book();
-        $result = $book->saveBook($_POST);
-        error_log("saveBook returned: " . print_r($result, true));
-        echo $result;
-    } 
+// This code is responsible for handling book-related operations in LibraNet
+$book = new Book();
 
-    
-    if(isset($_POST['editId'])){
-        $book = new Book();
-        $result = $book->editBook($_POST['editId']);
-        error_log("editId returned: " . print_r($result, true));
-        echo $result;
-    }
+if (isset($_POST['bookTitle'])) {
+    $result = $book->saveBook($_POST);
+    error_log("saveBook returned: " . print_r($result, true));
+    echo $result;
+}
+
+if(isset($_POST['editId'])){
+    $result = $book->editBook($_POST['editId']);
+    error_log("editId returned: " . print_r($result, true));
+    echo $result;
+}
+
+if(isset($_POST['bookID'])){
+    $result = $book->updateBook($_POST);
+    echo $result;
+}
 
 
 ?>

@@ -201,3 +201,324 @@ Stack trace:
 [07-Apr-2024 12:02:20 Europe/Berlin] editId: 6
 [07-Apr-2024 12:02:20 Europe/Berlin] Number of rows: 1
 [07-Apr-2024 12:02:20 Europe/Berlin] editId returned: {"bookID":"6","bookTitle":"Cartiana is Daddys number 1","bookDescript":"Beautitful princess Cartiana","author":"Daddy"}
+[07-Apr-2024 12:45:09 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:09 Europe/Berlin] editId: 4
+[07-Apr-2024 12:45:09 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:09 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits","bookDescript":"How to win at goal setting","author":"James Clear"}
+[07-Apr-2024 12:45:18 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:18 Europe/Berlin] editId: 8
+[07-Apr-2024 12:45:18 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:18 Europe/Berlin] editId returned: {"bookID":"8","bookTitle":"New book","bookDescript":"This is a new book","author":"Me"}
+[07-Apr-2024 12:45:30 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:30 Europe/Berlin] editId: 8
+[07-Apr-2024 12:45:30 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:30 Europe/Berlin] editId returned: {"bookID":"8","bookTitle":"New book","bookDescript":"This is a new book","author":"Me"}
+[07-Apr-2024 12:45:32 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:32 Europe/Berlin] editId: 6
+[07-Apr-2024 12:45:32 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:32 Europe/Berlin] editId returned: {"bookID":"6","bookTitle":"Cartiana is Daddys number 1","bookDescript":"Beautitful princess Cartiana","author":"Daddy"}
+[07-Apr-2024 12:45:36 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:36 Europe/Berlin] editId: 4
+[07-Apr-2024 12:45:36 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:36 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits","bookDescript":"How to win at goal setting","author":"James Clear"}
+[07-Apr-2024 12:45:41 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:41 Europe/Berlin] editId: 7
+[07-Apr-2024 12:45:41 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:41 Europe/Berlin] editId returned: {"bookID":"7","bookTitle":"","bookDescript":"","author":""}
+[07-Apr-2024 12:45:54 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[07-Apr-2024 12:45:54 Europe/Berlin] editId: 2
+[07-Apr-2024 12:45:54 Europe/Berlin] Number of rows: 1
+[07-Apr-2024 12:45:54 Europe/Berlin] editId returned: {"bookID":"2","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 02:55:48 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 02:55:48 Europe/Berlin] editId: 1
+[09-Apr-2024 02:55:48 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 02:55:48 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 02:56:00 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 02:56:00 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 02:56:00 Europe/Berlin] editId: 
+[09-Apr-2024 02:56:00 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 02:56:00 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 02:56:02 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 02:56:02 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 02:56:02 Europe/Berlin] editId: 
+[09-Apr-2024 02:56:02 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 02:56:02 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:01:00 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:01:00 Europe/Berlin] editId: 1
+[09-Apr-2024 03:01:00 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:01:00 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 03:01:01 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 03:01:01 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:01:01 Europe/Berlin] editId: 
+[09-Apr-2024 03:01:01 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 03:01:01 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:01:12 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:01:12 Europe/Berlin] editId: 1
+[09-Apr-2024 03:01:12 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:01:12 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 03:01:15 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 03:01:15 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:01:15 Europe/Berlin] editId: 
+[09-Apr-2024 03:01:15 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 03:01:15 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:01:34 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 03:01:34 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:01:34 Europe/Berlin] editId: 
+[09-Apr-2024 03:01:34 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 03:01:34 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:08:38 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:08:38 Europe/Berlin] editId: 1
+[09-Apr-2024 03:08:38 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:08:38 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 03:08:48 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 03:08:48 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:08:48 Europe/Berlin] editId: 
+[09-Apr-2024 03:08:48 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 03:08:48 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:14:53 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:14:53 Europe/Berlin] editId: 1
+[09-Apr-2024 03:14:53 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:14:53 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 03:14:57 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 03:14:57 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:14:57 Europe/Berlin] editId: 
+[09-Apr-2024 03:14:57 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 03:14:57 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:18:08 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:18:08 Europe/Berlin] editId: 1
+[09-Apr-2024 03:18:08 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:18:08 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 03:18:17 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:18:17 Europe/Berlin] editId: 
+[09-Apr-2024 03:18:17 Europe/Berlin] Number of rows: 0
+[09-Apr-2024 03:18:17 Europe/Berlin] editId returned: {"type":"error","message":"No book found with the provided ID"}
+[09-Apr-2024 03:20:10 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:20:10 Europe/Berlin] editId: 1
+[09-Apr-2024 03:20:10 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:20:10 Europe/Berlin] editId returned: {"bookID":"1","bookTitle":"ab","bookDescript":"","author":"a"}
+[09-Apr-2024 03:24:17 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:24:17 Europe/Berlin] editId: 4
+[09-Apr-2024 03:24:17 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:24:17 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:24:19 Europe/Berlin] PHP Warning:  Undefined variable $book in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 110
+[09-Apr-2024 03:24:19 Europe/Berlin] PHP Fatal error:  Uncaught Error: Call to a member function updateBook() on null in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php:110
+Stack trace:
+#0 {main}
+  thrown in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 110
+[09-Apr-2024 03:25:40 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:25:40 Europe/Berlin] editId: 4
+[09-Apr-2024 03:25:40 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:25:40 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:25:42 Europe/Berlin] PHP Warning:  Undefined array key "bookTitle" in C:\xampp\htdocs\LibraNet\LibraNet\modules\addBook.php on line 70
+[09-Apr-2024 03:28:34 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:28:34 Europe/Berlin] editId: 4
+[09-Apr-2024 03:28:34 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:28:34 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:35:25 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:35:25 Europe/Berlin] editId: 4
+[09-Apr-2024 03:35:25 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:35:25 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:35:55 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:35:55 Europe/Berlin] editId: 13
+[09-Apr-2024 03:35:55 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:35:55 Europe/Berlin] editId returned: {"bookID":"13","bookTitle":"b","bookDescript":"g","author":"d"}
+[09-Apr-2024 03:38:20 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:38:20 Europe/Berlin] editId: 4
+[09-Apr-2024 03:38:20 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:38:20 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:38:38 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:38:38 Europe/Berlin] editId: 4
+[09-Apr-2024 03:38:38 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:38:38 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:40:16 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:40:16 Europe/Berlin] editId: 4
+[09-Apr-2024 03:40:16 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:40:16 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 111","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:42:57 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:42:57 Europe/Berlin] editId: 4
+[09-Apr-2024 03:42:57 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:42:57 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1111","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 03:43:55 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 03:43:55 Europe/Berlin] editId: 4
+[09-Apr-2024 03:43:55 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 03:43:55 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11111","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:33:45 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:33:45 Europe/Berlin] editId: 4
+[09-Apr-2024 04:33:45 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:33:45 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:34:06 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:34:06 Europe/Berlin] editId: 4
+[09-Apr-2024 04:34:06 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:34:06 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:36:54 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:36:54 Europe/Berlin] editId: 4
+[09-Apr-2024 04:36:54 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:36:54 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 111","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:37:16 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:37:16 Europe/Berlin] editId: 4
+[09-Apr-2024 04:37:16 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:37:16 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 111","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:40:34 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:40:34 Europe/Berlin] editId: 4
+[09-Apr-2024 04:40:34 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:40:34 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 111","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:44:35 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:44:35 Europe/Berlin] editId: 4
+[09-Apr-2024 04:44:35 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:44:35 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:44:38 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:44:38 Europe/Berlin] editId: 4
+[09-Apr-2024 04:44:38 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:44:38 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:44:48 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:44:48 Europe/Berlin] editId: 4
+[09-Apr-2024 04:44:48 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:44:48 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:45:27 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:45:27 Europe/Berlin] editId: 4
+[09-Apr-2024 04:45:27 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:45:27 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:46:55 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:46:55 Europe/Berlin] editId: 4
+[09-Apr-2024 04:46:55 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:46:55 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:49:33 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:49:33 Europe/Berlin] editId: 4
+[09-Apr-2024 04:49:33 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:49:33 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:50:45 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:50:45 Europe/Berlin] editId: 4
+[09-Apr-2024 04:50:45 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:50:45 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:50:48 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:50:48 Europe/Berlin] editId: 4
+[09-Apr-2024 04:50:48 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:50:48 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:51:10 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:51:10 Europe/Berlin] editId: 4
+[09-Apr-2024 04:51:10 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:51:10 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:51:18 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:51:18 Europe/Berlin] editId: 4
+[09-Apr-2024 04:51:18 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:51:18 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:51:22 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:51:22 Europe/Berlin] editId: 10
+[09-Apr-2024 04:51:22 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:51:22 Europe/Berlin] editId returned: {"bookID":"10","bookTitle":"Mary","bookDescript":"dog","author":"s"}
+[09-Apr-2024 04:52:50 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:52:50 Europe/Berlin] editId: 4
+[09-Apr-2024 04:52:50 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:52:50 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 04:53:06 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:53:06 Europe/Berlin] editId: 9
+[09-Apr-2024 04:53:06 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:53:06 Europe/Berlin] editId returned: {"bookID":"9","bookTitle":"Mary","bookDescript":"dog","author":"s"}
+[09-Apr-2024 04:58:40 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 04:58:40 Europe/Berlin] editId: 4
+[09-Apr-2024 04:58:40 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 04:58:40 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:00:58 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:00:58 Europe/Berlin] editId: 4
+[09-Apr-2024 05:00:58 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:00:58 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:03:03 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:03:03 Europe/Berlin] editId: 4
+[09-Apr-2024 05:03:03 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:03:03 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:09:21 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:09:21 Europe/Berlin] editId: 4
+[09-Apr-2024 05:09:21 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:09:21 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits w","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:09:41 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:09:41 Europe/Berlin] editId: 4
+[09-Apr-2024 05:09:41 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:09:41 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:11:05 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:11:05 Europe/Berlin] editId: 4
+[09-Apr-2024 05:11:05 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:11:05 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:11:17 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:11:17 Europe/Berlin] editId: 4
+[09-Apr-2024 05:11:17 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:11:17 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:11:21 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:11:21 Europe/Berlin] editId: 4
+[09-Apr-2024 05:11:21 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:11:21 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:12:49 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:12:49 Europe/Berlin] editId: 4
+[09-Apr-2024 05:12:49 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:12:49 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:14:16 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:14:16 Europe/Berlin] editId: 4
+[09-Apr-2024 05:14:16 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:14:16 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:15:45 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:15:45 Europe/Berlin] editId: 4
+[09-Apr-2024 05:15:45 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:15:45 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:16:11 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:16:11 Europe/Berlin] editId: 4
+[09-Apr-2024 05:16:11 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:16:11 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:22:57 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:22:57 Europe/Berlin] editId: 4
+[09-Apr-2024 05:22:57 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:22:57 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:35:44 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:35:44 Europe/Berlin] editId: 4
+[09-Apr-2024 05:35:44 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:35:44 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:36:52 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:36:52 Europe/Berlin] editId: 4
+[09-Apr-2024 05:36:52 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:36:52 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:39:34 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:39:34 Europe/Berlin] editId: 4
+[09-Apr-2024 05:39:34 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:39:34 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:48:24 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 05:51:48 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 05:51:48 Europe/Berlin] editId: 4
+[09-Apr-2024 05:51:48 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 05:51:48 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 11","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 05:59:12 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 06:01:38 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:01:38 Europe/Berlin] editId: 4
+[09-Apr-2024 06:01:38 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:01:38 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 06:01:45 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:01:45 Europe/Berlin] editId: 4
+[09-Apr-2024 06:01:45 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:01:45 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 06:02:51 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:02:51 Europe/Berlin] editId: 4
+[09-Apr-2024 06:02:51 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:02:51 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 06:03:00 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:03:00 Europe/Berlin] editId: 4
+[09-Apr-2024 06:03:00 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:03:00 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits 1","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 06:03:33 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 06:04:16 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[09-Apr-2024 06:04:33 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:04:33 Europe/Berlin] editId: 5
+[09-Apr-2024 06:04:33 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:04:33 Europe/Berlin] editId returned: {"bookID":"5","bookTitle":"My Wife is the Best","bookDescript":"As above","author":"Daddy"}
+[09-Apr-2024 06:04:57 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:04:57 Europe/Berlin] editId: 6
+[09-Apr-2024 06:04:57 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:04:57 Europe/Berlin] editId returned: {"bookID":"6","bookTitle":"Cartiana is Daddys number 1","bookDescript":"Beautitful princess Cartiana","author":"Daddy"}
+[09-Apr-2024 06:06:40 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:06:40 Europe/Berlin] editId: 4
+[09-Apr-2024 06:06:40 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:06:40 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 06:07:43 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:07:43 Europe/Berlin] editId: 4
+[09-Apr-2024 06:07:43 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:07:43 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
+[09-Apr-2024 06:11:45 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[09-Apr-2024 06:11:45 Europe/Berlin] editId: 4
+[09-Apr-2024 06:11:45 Europe/Berlin] Number of rows: 1
+[09-Apr-2024 06:11:45 Europe/Berlin] editId returned: {"bookID":"4","bookTitle":"Atomic Habits ","bookDescript":"How to win at goal setting","author":"James Clear"}
