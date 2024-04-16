@@ -7,8 +7,7 @@ LibraNet is a library management system built with PHP, javascript, bootstrap an
 1. Clone the repository: `git clone https://github.com/tehuticode/LibraNet.git`
 2. Navigate to the project directory: `cd LibraNet`
 3. Install dependencies: `composer install` (if applicable)
-4. Configure your database in `utilities/DBconnect.php`
-5. Run the project on your local server
+4. Run the project on your local server
 
 ## Usage
 
