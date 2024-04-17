@@ -557,3 +557,16 @@ Stack trace:
 [09-Apr-2024 10:32:05 Europe/Berlin] Number of rows: 1
 [09-Apr-2024 10:32:05 Europe/Berlin] editId returned: {"bookID":"21","bookTitle":"The yummy dinner","bookDescript":"Yummy dnner for me","author":"Mummy"}
 [09-Apr-2024 10:34:00 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[14-Apr-2024 14:54:42 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
+[14-Apr-2024 14:54:47 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[14-Apr-2024 14:54:47 Europe/Berlin] editId: 23
+[14-Apr-2024 14:54:47 Europe/Berlin] Number of rows: 1
+[14-Apr-2024 14:54:47 Europe/Berlin] editId returned: {"bookID":"23","bookTitle":"Winds of Time","bookDescript":"Fantasy novel","author":"Robert Jordan"}
+[14-Apr-2024 14:59:23 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[14-Apr-2024 14:59:23 Europe/Berlin] editId: 23
+[14-Apr-2024 14:59:23 Europe/Berlin] Number of rows: 1
+[14-Apr-2024 14:59:23 Europe/Berlin] editId returned: {"bookID":"23","bookTitle":"Winds of Time","bookDescript":"Fantasy novel","author":"Robert Jordan"}
+[16-Apr-2024 14:55:40 Europe/Berlin] SQL query: SELECT * FROM books WHERE bookID = :editId
+[16-Apr-2024 14:55:40 Europe/Berlin] editId: 23
+[16-Apr-2024 14:55:40 Europe/Berlin] Number of rows: 1
+[16-Apr-2024 14:55:40 Europe/Berlin] editId returned: {"bookID":"23","bookTitle":"Winds of Time","bookDescript":"Fantasy novel","author":"Robert Jordan"}

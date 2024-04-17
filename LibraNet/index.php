@@ -8,6 +8,13 @@ if (!$conn) {
   echo "Not connected to database.";
 }
 
+session_start();
+
+if (!isset($_SESSION['loggedin'])) {
+    header('Location: /home.php');
+    exit;
+}
+
 ?>
 
 <!DOCTYPE html>
