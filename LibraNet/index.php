@@ -39,10 +39,12 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
-                    <div class="card-header">
-                        <i class="fa-solid fa-book"></i>
-                        Libra<span>Net</span>
-                    </div>
+                <div class="card-header">
+                    <a href="home.php" style="color: inherit; text-decoration: none; background-color: #add8e6; color: black; padding: 10px 20px; border-radius: 5px; display: flex; align-items: center;">
+                        <i class="fa-solid fa-book" ></i>
+                         Libra<span>Net</span>
+                    </a>
+                </div>
                         <div style="display: flex; justify-content: flex-end;">
                             <button class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#addBook">Add Book</button>
                         </div>

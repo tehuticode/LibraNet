@@ -26,18 +26,60 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $loginResult = $auth->login($email, $password);
 }
 
-if ($loginResult['error'] == false) {
-    $_SESSION['loggedin'] = true;
-    header('Location: /index.php');
-    exit;
-}
+    if ($loginResult !== null && $loginResult['error'] == false) {
+        $_SESSION['loggedin'] = true;
+        header('Location: /LibraNet/index.php');
+        exit;
+    }
 ?>
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Login</title>
+<style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            max-width: 500px;
+            margin: auto;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="email"], input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        input[type="submit"] {
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        </style>
 </head>
+
 <body>
     <form method="post" action="login.php">
         <label for="email">Email:</label><br>

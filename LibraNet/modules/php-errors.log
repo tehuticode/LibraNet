@@ -570,3 +570,4 @@ Stack trace:
 [16-Apr-2024 14:55:40 Europe/Berlin] editId: 23
 [16-Apr-2024 14:55:40 Europe/Berlin] Number of rows: 1
 [16-Apr-2024 14:55:40 Europe/Berlin] editId returned: {"bookID":"23","bookTitle":"Winds of Time","bookDescript":"Fantasy novel","author":"Robert Jordan"}
+[18-Apr-2024 01:34:19 Europe/Berlin] saveBook returned: {"type":"success","message":"Book saved successfully"}
