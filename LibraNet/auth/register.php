@@ -51,7 +51,7 @@ ob_end_flush();
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            background: linear-gradient(to right, #add8e6, #000080);
             padding: 20px;
         }
 

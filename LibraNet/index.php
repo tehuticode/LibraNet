@@ -31,6 +31,7 @@ if (!isset($_SESSION['loggedin'])) {
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     
+    
 </head>
 <body>
     <div class="container">
@@ -39,12 +40,44 @@ if (!isset($_SESSION['loggedin'])) {
         <div class="row">
             <div class="col-md-12">
                 <div class="card">
+                    <style>
+                        body {
+                            background: 
+                            linear-gradient(to right, #a39b9b, #5a4134);
+                            color: #3c3836;
+                        } 
+                            .card-header {
+                                display: flex;
+                                justify-content: flex-start;
+                            }
+
+                            .home-link {
+                                color: inherit;
+                                text-decoration: none;
+                                background-color: #add8e6;
+                                color: black;
+                                padding: 10px 20px;
+                                border-radius: 5px;
+                                display: flex;
+                                align-items: center;
+                            }
+
+                            .home-link:hover {
+                                background-color: #90B8D9; 
+                            }
+
+                            
+
+                    </style>
+                
+        
+
                 <div class="card-header">
-                    <a href="home.php" style="color: inherit; text-decoration: none; background-color: #add8e6; color: black; padding: 10px 20px; border-radius: 5px; display: flex; align-items: center;">
-                        <i class="fa-solid fa-book" ></i>
-                         Libra<span>Net</span>
+                    <a href="home.php" class="home-link">
+                        
+                        Home
                     </a>
-                </div>
+</div>
                         <div style="display: flex; justify-content: flex-end;">
                             <button class="btn btn-success btn-md" data-bs-toggle="modal" data-bs-target="#addBook">Add Book</button>
                         </div>
@@ -52,7 +85,7 @@ if (!isset($_SESSION['loggedin'])) {
                         <table class="table table-striped">
                             <thead>
                                 <tr>
-                                    <th width="15%">#</th>
+                                    <th width="15%">No.</th>
                                     <th width="55%">Title</th> 
                                     <th width="30%">Management</th>      
                                 </tr>
