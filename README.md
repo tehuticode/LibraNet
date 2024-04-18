@@ -1,6 +1,6 @@
 # LibraNet
 
-LibraNet is a library management system built with PHP, javascript, bootstrap and MySql
+LibraNet is a library management system built with HTML, CSS, PHP, javascript, bootstrap and MySql
 
 ## Installation
 

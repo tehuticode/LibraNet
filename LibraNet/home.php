@@ -27,7 +27,7 @@
 
         a button {
             color: #fff;
-            background-color: #007BFF;
+            background-color: #5B4513;
             border: none;
             border-radius: 5px;
             padding: 10px 20px;
@@ -38,13 +38,13 @@
         }
 
         a button:hover {
-            background-color: #0056b3;
+            background-color: #5A3511;
         }
     </style>
 </head>
 <body>
 <div class="container">
-        <h1>Welcome to the LibraNet!</h1>
+        <h1>LibraNet</h1>
         <a href="/LibraNet/auth/register.php"><button>Register</button></a>
         <a href="/LibraNet/auth/login.php"><button>Login</button></a>
     </div>
